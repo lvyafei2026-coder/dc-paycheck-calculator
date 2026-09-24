@@ -1,4 +1,19 @@
 function t() { return (window.__i18n && window.__i18n.t) || {}; }
+function lang() { return (window.__i18n && window.__i18n.lang) || 'en'; }
+
+// USD amounts and rates follow the page's own language, using the same conventions as
+// the tax-bracket tables in the HTML — de "11.600 $", ru "$11 600", es "11.600".
+// Kept in sync by _dc-num-apply.mjs, which compares this table against its own.
+const NUM_LOCALE = {
+  en: { tag: 'en-US', pre: '$', post: '' },
+  zh: { tag: 'zh-CN', pre: '$', post: '' },
+  'zh-TW': { tag: 'zh-TW', pre: '$', post: '' },
+  ja: { tag: 'ja-JP', pre: '$', post: '' },
+  ko: { tag: 'ko-KR', pre: '$', post: '' },
+  de: { tag: 'de-DE', pre: '', post: ' $' },
+  ru: { tag: 'ru-RU', pre: '$', post: '' },
+  es: { tag: 'es-ES', pre: '$', post: '' },
+};
 
 // 2026 Federal brackets (single)
 const FED_SINGLE = [
@@ -66,17 +81,22 @@ function calculate() {
   const netAnnual = gross - federal - fica - dc;
   const netPerPeriod = netAnnual / freq;
 
-  const fmt = n => '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const c = NUM_LOCALE[lang()] || NUM_LOCALE.en;
+  // ru-RU groups with U+00A0; the page text uses a plain space, so flatten it.
+  const num = (n, min, max) => new Intl.NumberFormat(c.tag,
+    { minimumFractionDigits: min, maximumFractionDigits: max }).format(n).replace(/\u00A0/g, ' ');
+  const fmt = n => c.pre + num(n, 2, 2) + c.post;
   const freqName = tr['freqName' + freq] || ('per period');
 
   document.getElementById('netPay').textContent = fmt(netPerPeriod);
-  document.getElementById('freqNote').textContent = (tr.freqNote || 'Net pay per period') + ' · ' + freq + ' paychecks/year';
+  document.getElementById('freqNote').textContent = (tr.freqNote || 'Net pay per period') + ' · ' +
+    (tr.freqCount || '{n} paychecks/year').replace('{n}', freq);
   document.getElementById('bdGross').textContent = fmt(gross);
   document.getElementById('bdFederal').textContent = '-' + fmt(federal);
   document.getElementById('bdFica').textContent = '-' + fmt(fica);
   document.getElementById('bdDc').textContent = '-' + fmt(dc);
   document.getElementById('bdNet').textContent = fmt(netAnnual);
-  const effRate = gross > 0 ? ((federal + fica + dc) / gross * 100).toFixed(1) : '0';
+  const effRate = gross > 0 ? num((federal + fica + dc) / gross * 100, 1, 1) : '0';
   document.getElementById('bdEff').textContent = effRate + '%';
 
   const result = document.getElementById('result');
