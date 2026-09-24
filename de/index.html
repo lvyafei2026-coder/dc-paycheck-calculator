@@ -61,63 +61,63 @@
   </div>
   <div class="hero-inner">
     <div class="hero-badge">🏛️ Washington, D.C.</div>
-    <h1 data-i18n="title">DC Paycheck Calculator</h1>
-    <p data-i18n="subtitle">Estimate your take-home pay after federal income tax, FICA, and District of Columbia taxes. Updated for 2026.</p>
+    <h1 data-i18n="title">DC-Gehaltsrechner</h1>
+    <p data-i18n="subtitle">Schätzen Sie Ihr Nettoeinkommen nach Bundessteuer, FICA und District of Columbia Steuern. Aktualisiert für 2026.</p>
   </div>
 </header>
 
 <main class="wrap">
   <section class="card">
-    <h2 class="visually-hidden" data-i18n="calcHeading">Calculator</h2>
+    <h2 class="visually-hidden" data-i18n="calcHeading">Rechner</h2>
     <div class="row">
       <div>
-        <label for="salary" data-i18n="salaryLabel">Annual gross salary ($)</label>
+        <label for="salary" data-i18n="salaryLabel">Bruttojahresgehalt ($)</label>
         <input type="number" id="salary" min="0" step="1000" placeholder="85000" inputmode="decimal">
       </div>
       <div>
-        <label for="frequency" data-i18n="freqLabel">Pay frequency</label>
+        <label for="frequency" data-i18n="freqLabel">Zahlungsrhythmus</label>
         <select id="frequency">
-          <option value="26" data-i18n="freqBiweekly">Bi-weekly (26)</option>
-          <option value="24" data-i18n="freqSemimonthly">Semi-monthly (24)</option>
-          <option value="12" data-i18n="freqMonthly">Monthly (12)</option>
-          <option value="52" data-i18n="freqWeekly">Weekly (52)</option>
+          <option value="26" data-i18n="freqBiweekly">Zweiwöchentlich (26)</option>
+          <option value="24" data-i18n="freqSemimonthly">Halbmonatlich (24)</option>
+          <option value="12" data-i18n="freqMonthly">Monatlich (12)</option>
+          <option value="52" data-i18n="freqWeekly">Wöchentlich (52)</option>
         </select>
       </div>
     </div>
-    <label for="filing" data-i18n="filingLabel">Filing status</label>
+    <label for="filing" data-i18n="filingLabel">Steuerstatus</label>
     <select id="filing">
-      <option value="single" data-i18n="filingSingle">Single</option>
-      <option value="married" data-i18n="filingMarried">Married filing jointly</option>
+      <option value="single" data-i18n="filingSingle">Ledig</option>
+      <option value="married" data-i18n="filingMarried">Verheiratet, gemeinsame Veranlagung</option>
     </select>
-    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Calculate take-home pay</button>
+    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Nettoeinkommen berechnen</button>
 
     <div id="result" role="region" aria-live="polite">
-      <div class="result-label" data-i18n="resultLabel">Estimated take-home pay</div>
+      <div class="result-label" data-i18n="resultLabel">Geschätztes Nettoeinkommen</div>
       <div class="net-pay"><span id="netPay">—</span></div>
       <div class="freq-note" id="freqNote"></div>
 
       <div class="breakdown">
-        <div class="bd-row"><span data-i18n="bdGross">Gross annual</span><strong id="bdGross">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdFederal">Federal income tax</span><strong id="bdFederal">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdFica">FICA (Social Security + Medicare)</span><strong id="bdFica">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdDc">D.C. state tax</span><strong id="bdDc">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdNet">Net annual</span><strong id="bdNet">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdEff">Effective tax rate</span><strong id="bdEff">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdGross">Bruttojahresgehalt</span><strong id="bdGross">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdFederal">Bundeseinkommensteuer</span><strong id="bdFederal">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdFica">FICA (Sozialversicherung + Medicare)</span><strong id="bdFica">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdDc">D.C. Steuern</span><strong id="bdDc">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdNet">Nettojahresgehalt</span><strong id="bdNet">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdEff">Effektiver Steuersatz</span><strong id="bdEff">—</strong></div>
       </div>
-      <div class="result-disclaimer" data-i18n="resultDisclaimer">Estimate only. Actual withholding may vary based on deductions, credits, and employer benefits.</div>
+      <div class="result-disclaimer" data-i18n="resultDisclaimer">Nur eine Schätzung. Der tatsächliche Abzug kann je nach Abzügen, Gutschriften und Arbeitgeberleistungen variieren.</div>
     </div>
   </section>
 
   <section>
-    <h2 data-i18n="whatIsTitle">What this calculator does</h2>
-    <p data-i18n="whatIsText">This tool estimates your take-home pay in Washington, D.C. by subtracting federal income tax, FICA contributions (Social Security and Medicare), and D.C. state income tax from your gross salary. It uses the 2026 federal tax brackets, the standard deduction, and the District of Columbia's current progressive tax rates.</p>
+    <h2 data-i18n="whatIsTitle">Was dieser Rechner macht</h2>
+    <p data-i18n="whatIsText">Dieses Tool schätzt Ihr Nettoeinkommen in Washington, D.C., indem es Bundeseinkommensteuer, FICA-Beiträge (Sozialversicherung und Medicare) und D.C.-Einkommensteuer von Ihrem Bruttogehalt abzieht. Es verwendet die Bundessteuersätze 2026, den Standardabzug und die aktuellen progressiven Steuersätze des District of Columbia.</p>
   </section>
 
   <section>
-    <h2 data-i18n="bracketsTitle">2026 Tax brackets at a glance</h2>
-    <h3 data-i18n="federalTitle">Federal income tax (single)</h3>
+    <h2 data-i18n="bracketsTitle">Steuersätze 2026 im Überblick</h2>
+    <h3 data-i18n="federalTitle">Bundeseinkommensteuer (Ledig)</h3>
     <table>
-      <thead><tr><th data-i18n="thRate">Rate</th><th data-i18n="thIncome">Taxable income</th></tr></thead>
+      <thead><tr><th data-i18n="thRate">Satz</th><th data-i18n="thIncome">Zu versteuerndes Einkommen</th></tr></thead>
       <tbody>
         <tr><td>10%</td><td>$0 – $11,600</td></tr>
         <tr><td>12%</td><td>$11,600 – $47,150</td></tr>
@@ -129,9 +129,9 @@
       </tbody>
     </table>
 
-    <h3 data-i18n="dcTitle">D.C. state income tax</h3>
+    <h3 data-i18n="dcTitle">D.C. Einkommensteuer</h3>
     <table>
-      <thead><tr><th data-i18n="thRate">Rate</th><th data-i18n="thIncome">Taxable income</th></tr></thead>
+      <thead><tr><th data-i18n="thRate">Satz</th><th data-i18n="thIncome">Zu versteuerndes Einkommen</th></tr></thead>
       <tbody>
         <tr><td>4%</td><td>$0 – $10,000</td></tr>
         <tr><td>6%</td><td>$10,000 – $40,000</td></tr>
@@ -142,42 +142,42 @@
       </tbody>
     </table>
 
-    <h3 data-i18n="ficaTitle">FICA contributions</h3>
+    <h3 data-i18n="ficaTitle">FICA-Beiträge</h3>
     <ul>
-      <li data-i18n="ficaSs"><strong>Social Security:</strong> 6.2% on wages up to $168,600</li>
-      <li data-i18n="ficaMc"><strong>Medicare:</strong> 1.45% on all wages, plus 0.9% additional tax above $200,000 (single) or $250,000 (married)</li>
+      <li data-i18n="ficaSs">Sozialversicherung: 6,2% auf Löhne bis 168.600 $</li>
+      <li data-i18n="ficaMc">Medicare: 1,45% auf alle Löhne, plus 0,9% Zusatzsteuer über 200.000 $ (Ledig) bzw. 250.000 $ (Verheiratet)</li>
     </ul>
   </section>
 
   <section>
-    <h2 data-i18n="howToTitle">How to use this calculator</h2>
+    <h2 data-i18n="howToTitle">Verwendung</h2>
     <ol>
-      <li data-i18n="howTo1">Enter your annual gross salary before any deductions.</li>
-      <li data-i18n="howTo2">Choose your pay frequency — most D.C. employers pay bi-weekly (26 paychecks per year).</li>
-      <li data-i18n="howTo3">Select your filing status. Married couples filing jointly receive a higher standard deduction.</li>
-      <li data-i18n="howTo4">Click "Calculate take-home pay" to see your net income per paycheck and annually.</li>
+      <li data-i18n="howTo1">Geben Sie Ihr Bruttojahresgehalt vor Abzügen ein.</li>
+      <li data-i18n="howTo2">Wählen Sie Ihren Zahlungsrhythmus – die meisten D.C.-Arbeitgeber zahlen zweiwöchentlich (26 Gehälter pro Jahr).</li>
+      <li data-i18n="howTo3">Wählen Sie Ihren Steuerstatus. Verheiratete mit gemeinsamer Veranlagung erhalten einen höheren Standardabzug.</li>
+      <li data-i18n="howTo4">Klicken Sie auf "Nettoeinkommen berechnen", um Ihr Netto pro Gehalt und jährlich zu sehen.</li>
     </ol>
   </section>
 
   <section>
-    <h2 data-i18n="faqTitle">Frequently asked questions</h2>
-    <h3 data-i18n="faq1q">Does D.C. have state income tax?</h3>
-    <p data-i18n="faq1a">Yes. The District of Columbia levies its own income tax, with rates ranging from 4% to 10.75%. D.C. residents pay federal income tax and D.C. income tax, but no state tax to Maryland or Virginia.</p>
+    <h2 data-i18n="faqTitle">Häufig gestellte Fragen</h2>
+    <h3 data-i18n="faq1q">Hat D.C. eine Einkommensteuer?</h3>
+    <p data-i18n="faq1a">Ja. Der District of Columbia erhebt eine eigene Einkommensteuer mit Sätzen von 4% bis 10,75%. D.C.-Einwohner zahlen Bundes- und D.C.-Einkommensteuer, aber keine Staatssteuer an Maryland oder Virginia.</p>
 
-    <h3 data-i18n="faq2q">What is FICA?</h3>
-    <p data-i18n="faq2a">FICA stands for the Federal Insurance Contributions Act. It funds Social Security (6.2% up to the wage base limit) and Medicare (1.45% on all wages). Your employer matches these contributions, but only your portion is deducted from your paycheck.</p>
+    <h3 data-i18n="faq2q">Was ist FICA?</h3>
+    <p data-i18n="faq2a">FICA steht für Federal Insurance Contributions Act. Es finanziert Sozialversicherung (6,2% bis zur Lohnobergrenze) und Medicare (1,45% auf alle Löhne). Ihr Arbeitgeber zahlt denselben Betrag, aber nur Ihr Anteil wird vom Gehalt abgezogen.</p>
 
-    <h3 data-i18n="faq3q">Why is my actual paycheck different from this estimate?</h3>
-    <p data-i18n="faq3a">This calculator uses standard deductions and assumes no additional withholdings. Your actual paycheck may be lower due to 401(k) contributions, health insurance premiums, HSA/FSA contributions, or additional withholding you elected on your W-4.</p>
+    <h3 data-i18n="faq3q">Warum unterscheidet sich mein tatsächliches Gehalt von dieser Schätzung?</h3>
+    <p data-i18n="faq3a">Dieser Rechner verwendet Standardabzüge und geht von keinen zusätzlichen Einbehalten aus. Ihr tatsächliches Gehalt kann aufgrund von 401(k)-Beiträgen, Krankenversicherungsprämien, HSA/FSA-Beiträgen oder zusätzlichen Einbehalten auf Ihrer W-4 niedriger ausfallen.</p>
 
-    <h3 data-i18n="faq4q">Are these numbers for 2026?</h3>
-    <p data-i18n="faq4a">Yes, the tax brackets and FICA wage limits reflect the 2026 tax year. Tax laws change annually — always confirm with the IRS or a tax professional before making financial decisions.</p>
+    <h3 data-i18n="faq4q">Sind diese Zahlen für 2026?</h3>
+    <p data-i18n="faq4a">Ja, die Steuersätze und FICA-Lohngrenzen spiegeln das Steuerjahr 2026 wider. Steuergesetze ändern sich jährlich – bestätigen Sie dies immer beim IRS oder einem Steuerberater, bevor Sie finanzielle Entscheidungen treffen.</p>
 
-    <div class="disclaimer" data-i18n="disclaimer"><strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. It is not tax advice. Consult a qualified tax professional for your specific situation.</div>
+    <div class="disclaimer" data-i18n="disclaimer"><strong>Haftungsausschluss:</strong> Dieser Rechner bietet Schätzungen nur zu Bildungszwecken. Er ist keine Steuerberatung. Konsultieren Sie einen qualifizierten Steuerberater für Ihre spezifische Situation.</div>
   </section>
 </main>
 
-<footer class="footer" data-i18n="footer">Runs entirely in your browser. No data is collected or stored.</footer>
+<footer class="footer" data-i18n="footer">Läuft vollständig in Ihrem Browser. Es werden keine Daten gesammelt oder gespeichert.</footer>
 
 <script src="/js/i18n.js"></script>
 <script src="/js/calculator.js"></script>

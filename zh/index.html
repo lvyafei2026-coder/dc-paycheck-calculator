@@ -61,63 +61,63 @@
   </div>
   <div class="hero-inner">
     <div class="hero-badge">🏛️ Washington, D.C.</div>
-    <h1 data-i18n="title">DC Paycheck Calculator</h1>
-    <p data-i18n="subtitle">Estimate your take-home pay after federal income tax, FICA, and District of Columbia taxes. Updated for 2026.</p>
+    <h1 data-i18n="title">华盛顿特区薪资计算器</h1>
+    <p data-i18n="subtitle">估算扣除联邦所得税、FICA 和华盛顿特区州税后的实际到手薪资。已更新至 2026 年税率。</p>
   </div>
 </header>
 
 <main class="wrap">
   <section class="card">
-    <h2 class="visually-hidden" data-i18n="calcHeading">Calculator</h2>
+    <h2 class="visually-hidden" data-i18n="calcHeading">计算器</h2>
     <div class="row">
       <div>
-        <label for="salary" data-i18n="salaryLabel">Annual gross salary ($)</label>
+        <label for="salary" data-i18n="salaryLabel">年税前薪资（美元）</label>
         <input type="number" id="salary" min="0" step="1000" placeholder="85000" inputmode="decimal">
       </div>
       <div>
-        <label for="frequency" data-i18n="freqLabel">Pay frequency</label>
+        <label for="frequency" data-i18n="freqLabel">发薪频率</label>
         <select id="frequency">
-          <option value="26" data-i18n="freqBiweekly">Bi-weekly (26)</option>
-          <option value="24" data-i18n="freqSemimonthly">Semi-monthly (24)</option>
-          <option value="12" data-i18n="freqMonthly">Monthly (12)</option>
-          <option value="52" data-i18n="freqWeekly">Weekly (52)</option>
+          <option value="26" data-i18n="freqBiweekly">双周（26 次）</option>
+          <option value="24" data-i18n="freqSemimonthly">半月（24 次）</option>
+          <option value="12" data-i18n="freqMonthly">月度（12 次）</option>
+          <option value="52" data-i18n="freqWeekly">每周（52 次）</option>
         </select>
       </div>
     </div>
-    <label for="filing" data-i18n="filingLabel">Filing status</label>
+    <label for="filing" data-i18n="filingLabel">申报状态</label>
     <select id="filing">
-      <option value="single" data-i18n="filingSingle">Single</option>
-      <option value="married" data-i18n="filingMarried">Married filing jointly</option>
+      <option value="single" data-i18n="filingSingle">单身</option>
+      <option value="married" data-i18n="filingMarried">已婚合并申报</option>
     </select>
-    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">Calculate take-home pay</button>
+    <button class="calc" type="button" onclick="calculate()" data-i18n="calcBtn">计算到手薪资</button>
 
     <div id="result" role="region" aria-live="polite">
-      <div class="result-label" data-i18n="resultLabel">Estimated take-home pay</div>
+      <div class="result-label" data-i18n="resultLabel">预估到手薪资</div>
       <div class="net-pay"><span id="netPay">—</span></div>
       <div class="freq-note" id="freqNote"></div>
 
       <div class="breakdown">
-        <div class="bd-row"><span data-i18n="bdGross">Gross annual</span><strong id="bdGross">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdFederal">Federal income tax</span><strong id="bdFederal">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdFica">FICA (Social Security + Medicare)</span><strong id="bdFica">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdDc">D.C. state tax</span><strong id="bdDc">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdNet">Net annual</span><strong id="bdNet">—</strong></div>
-        <div class="bd-row"><span data-i18n="bdEff">Effective tax rate</span><strong id="bdEff">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdGross">税前年薪</span><strong id="bdGross">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdFederal">联邦所得税</span><strong id="bdFederal">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdFica">FICA（社保 + 医保）</span><strong id="bdFica">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdDc">华盛顿特区州税</span><strong id="bdDc">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdNet">税后年薪</span><strong id="bdNet">—</strong></div>
+        <div class="bd-row"><span data-i18n="bdEff">实际税率</span><strong id="bdEff">—</strong></div>
       </div>
-      <div class="result-disclaimer" data-i18n="resultDisclaimer">Estimate only. Actual withholding may vary based on deductions, credits, and employer benefits.</div>
+      <div class="result-disclaimer" data-i18n="resultDisclaimer">仅为估算值。实际扣缴会因扣除项、抵免和雇主福利而不同。</div>
     </div>
   </section>
 
   <section>
-    <h2 data-i18n="whatIsTitle">What this calculator does</h2>
-    <p data-i18n="whatIsText">This tool estimates your take-home pay in Washington, D.C. by subtracting federal income tax, FICA contributions (Social Security and Medicare), and D.C. state income tax from your gross salary. It uses the 2026 federal tax brackets, the standard deduction, and the District of Columbia's current progressive tax rates.</p>
+    <h2 data-i18n="whatIsTitle">这个计算器做什么</h2>
+    <p data-i18n="whatIsText">本工具通过从税前薪资中扣除联邦所得税、FICA 缴款（社保与医保）以及华盛顿特区州所得税，来估算您在华盛顿特区的实际到手薪资。计算使用 2026 年联邦税率表、标准扣除额以及特区现行累进税率。</p>
   </section>
 
   <section>
-    <h2 data-i18n="bracketsTitle">2026 Tax brackets at a glance</h2>
-    <h3 data-i18n="federalTitle">Federal income tax (single)</h3>
+    <h2 data-i18n="bracketsTitle">2026 年税率表一览</h2>
+    <h3 data-i18n="federalTitle">联邦所得税（单身）</h3>
     <table>
-      <thead><tr><th data-i18n="thRate">Rate</th><th data-i18n="thIncome">Taxable income</th></tr></thead>
+      <thead><tr><th data-i18n="thRate">税率</th><th data-i18n="thIncome">应税收入</th></tr></thead>
       <tbody>
         <tr><td>10%</td><td>$0 – $11,600</td></tr>
         <tr><td>12%</td><td>$11,600 – $47,150</td></tr>
@@ -129,9 +129,9 @@
       </tbody>
     </table>
 
-    <h3 data-i18n="dcTitle">D.C. state income tax</h3>
+    <h3 data-i18n="dcTitle">华盛顿特区州所得税</h3>
     <table>
-      <thead><tr><th data-i18n="thRate">Rate</th><th data-i18n="thIncome">Taxable income</th></tr></thead>
+      <thead><tr><th data-i18n="thRate">税率</th><th data-i18n="thIncome">应税收入</th></tr></thead>
       <tbody>
         <tr><td>4%</td><td>$0 – $10,000</td></tr>
         <tr><td>6%</td><td>$10,000 – $40,000</td></tr>
@@ -142,42 +142,42 @@
       </tbody>
     </table>
 
-    <h3 data-i18n="ficaTitle">FICA contributions</h3>
+    <h3 data-i18n="ficaTitle">FICA 缴款</h3>
     <ul>
-      <li data-i18n="ficaSs"><strong>Social Security:</strong> 6.2% on wages up to $168,600</li>
-      <li data-i18n="ficaMc"><strong>Medicare:</strong> 1.45% on all wages, plus 0.9% additional tax above $200,000 (single) or $250,000 (married)</li>
+      <li data-i18n="ficaSs">社保：工资在 168,600 美元以内按 6.2% 征收</li>
+      <li data-i18n="ficaMc">医保：全部工资按 1.45% 征收，单身超过 200,000 美元（已婚 250,000 美元）部分额外加征 0.9%</li>
     </ul>
   </section>
 
   <section>
-    <h2 data-i18n="howToTitle">How to use this calculator</h2>
+    <h2 data-i18n="howToTitle">如何使用本计算器</h2>
     <ol>
-      <li data-i18n="howTo1">Enter your annual gross salary before any deductions.</li>
-      <li data-i18n="howTo2">Choose your pay frequency — most D.C. employers pay bi-weekly (26 paychecks per year).</li>
-      <li data-i18n="howTo3">Select your filing status. Married couples filing jointly receive a higher standard deduction.</li>
-      <li data-i18n="howTo4">Click "Calculate take-home pay" to see your net income per paycheck and annually.</li>
+      <li data-i18n="howTo1">输入任何扣除前的年税前薪资。</li>
+      <li data-i18n="howTo2">选择发薪频率——多数特区雇主采用双周发薪（每年 26 次）。</li>
+      <li data-i18n="howTo3">选择申报状态。已婚合并申报可享受更高的标准扣除额。</li>
+      <li data-i18n="howTo4">点击“计算到手薪资”，查看每期净收入和年度净收入。</li>
     </ol>
   </section>
 
   <section>
-    <h2 data-i18n="faqTitle">Frequently asked questions</h2>
-    <h3 data-i18n="faq1q">Does D.C. have state income tax?</h3>
-    <p data-i18n="faq1a">Yes. The District of Columbia levies its own income tax, with rates ranging from 4% to 10.75%. D.C. residents pay federal income tax and D.C. income tax, but no state tax to Maryland or Virginia.</p>
+    <h2 data-i18n="faqTitle">常见问题</h2>
+    <h3 data-i18n="faq1q">华盛顿特区有州所得税吗？</h3>
+    <p data-i18n="faq1a">有。华盛顿特区征收自己的所得税，税率从 4% 到 10.75% 不等。特区居民需缴纳联邦所得税和特区所得税，但无需向马里兰州或弗吉尼亚州缴纳州税。</p>
 
-    <h3 data-i18n="faq2q">What is FICA?</h3>
-    <p data-i18n="faq2a">FICA stands for the Federal Insurance Contributions Act. It funds Social Security (6.2% up to the wage base limit) and Medicare (1.45% on all wages). Your employer matches these contributions, but only your portion is deducted from your paycheck.</p>
+    <h3 data-i18n="faq2q">什么是 FICA？</h3>
+    <p data-i18n="faq2a">FICA 是《联邦保险缴款法》的缩写，用于资助社会保障（工资上限内 6.2%）和医疗保险（全部工资 1.45%）。雇主会等额匹配这些缴款，但只有您自己那部分会从工资中扣除。</p>
 
-    <h3 data-i18n="faq3q">Why is my actual paycheck different from this estimate?</h3>
-    <p data-i18n="faq3a">This calculator uses standard deductions and assumes no additional withholdings. Your actual paycheck may be lower due to 401(k) contributions, health insurance premiums, HSA/FSA contributions, or additional withholding you elected on your W-4.</p>
+    <h3 data-i18n="faq3q">为什么实际工资与估算不同？</h3>
+    <p data-i18n="faq3a">本计算器使用标准扣除额，且假设没有额外预扣。实际工资可能因 401(k) 缴款、健康保险费、HSA/FSA 缴款或您在 W-4 上选择的额外预扣而更低。</p>
 
-    <h3 data-i18n="faq4q">Are these numbers for 2026?</h3>
-    <p data-i18n="faq4a">Yes, the tax brackets and FICA wage limits reflect the 2026 tax year. Tax laws change annually — always confirm with the IRS or a tax professional before making financial decisions.</p>
+    <h3 data-i18n="faq4q">这些数字是 2026 年的吗？</h3>
+    <p data-i18n="faq4a">是的，税率表和 FICA 工资上限均反映 2026 纳税年度。税法每年变化——在做出财务决定前，请务必向 IRS 或税务专业人士确认。</p>
 
-    <div class="disclaimer" data-i18n="disclaimer"><strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. It is not tax advice. Consult a qualified tax professional for your specific situation.</div>
+    <div class="disclaimer" data-i18n="disclaimer"><strong>免责声明：</strong>本计算器仅供教育用途提供估算，不构成税务建议。请咨询合格的税务专业人士以获取针对您具体情况的信息。</div>
   </section>
 </main>
 
-<footer class="footer" data-i18n="footer">Runs entirely in your browser. No data is collected or stored.</footer>
+<footer class="footer" data-i18n="footer">完全在您的浏览器中运行。不收集、不存储任何数据。</footer>
 
 <script src="/js/i18n.js"></script>
 <script src="/js/calculator.js"></script>
