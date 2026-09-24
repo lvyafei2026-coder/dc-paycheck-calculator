@@ -47,5 +47,8 @@
   "faq4a": "Ja, die Steuersätze und FICA-Lohngrenzen spiegeln das Steuerjahr 2026 wider. Steuergesetze ändern sich jährlich – bestätigen Sie dies immer beim IRS oder einem Steuerberater, bevor Sie finanzielle Entscheidungen treffen.",
   "disclaimer": "<strong>Haftungsausschluss:</strong> Dieser Rechner bietet Schätzungen nur zu Bildungszwecken. Er ist keine Steuerberatung. Konsultieren Sie einen qualifizierten Steuerberater für Ihre spezifische Situation.",
   "footer": "Läuft vollständig in Ihrem Browser. Es werden keine Daten gesammelt oder gespeichert.",
-  "alertFill": "Bitte geben Sie Ihr Jahresgehalt ein."
+  "alertFill": "Bitte geben Sie Ihr Jahresgehalt ein.",
+  "heroBadge": "🏛️ Washington, D.C.",
+  "topBracketFederal": "Über $609,350",
+  "topBracketDc": "Über $1,000,000"
 }

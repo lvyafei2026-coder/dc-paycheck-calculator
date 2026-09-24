@@ -47,5 +47,8 @@
   "faq4a": "Sí, los tramos impositivos y los límites salariales de FICA reflejan el año fiscal 2026. Las leyes fiscales cambian anualmente — siempre confirme con el IRS o un profesional de impuestos antes de tomar decisiones financieras.",
   "disclaimer": "<strong>Aviso legal:</strong> Esta calculadora proporciona estimaciones solo con fines educativos. No es asesoramiento fiscal. Consulte a un profesional de impuestos calificado para su situación específica.",
   "footer": "Se ejecuta completamente en su navegador. No se recopilan ni almacenan datos.",
-  "alertFill": "Por favor ingrese su salario anual."
+  "alertFill": "Por favor ingrese su salario anual.",
+  "heroBadge": "🏛️ Washington, D.C.",
+  "topBracketFederal": "Más de $609,350",
+  "topBracketDc": "Más de $1,000,000"
 }

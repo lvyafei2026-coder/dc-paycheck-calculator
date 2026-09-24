@@ -47,5 +47,8 @@
   "faq4a": "Yes, the tax brackets and FICA wage limits reflect the 2026 tax year. Tax laws change annually — always confirm with the IRS or a tax professional before making financial decisions.",
   "disclaimer": "<strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. It is not tax advice. Consult a qualified tax professional for your specific situation.",
   "footer": "Runs entirely in your browser. No data is collected or stored.",
-  "alertFill": "Please enter your annual salary."
+  "alertFill": "Please enter your annual salary.",
+  "heroBadge": "🏛️ Washington, D.C.",
+  "topBracketFederal": "Over $609,350",
+  "topBracketDc": "Over $1,000,000"
 }
