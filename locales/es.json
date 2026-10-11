@@ -1,5 +1,6 @@
 {
   "title": "Calculadora de Nómina de DC",
+  "allTools": "toolara",
   "subtitle": "Estime su salario neto después del impuesto federal, FICA y los impuestos del Distrito de Columbia. Actualizado para 2026.",
   "calcHeading": "Calculadora",
   "salaryLabel": "Salario bruto anual ($)",

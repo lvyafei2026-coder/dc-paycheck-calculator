@@ -46,19 +46,29 @@
 </head>
 <body>
 
-<header class="hero">
-  <div class="lang-switch">
-    <select id="langSelect" onchange="setLang(this.value)" aria-label="Language">
-      <option value="en">English</option>
-      <option value="zh">简体中文</option>
-      <option value="zh-TW">繁體中文</option>
-      <option value="ja">日本語</option>
-      <option value="ko">한국어</option>
-      <option value="de">Deutsch</option>
-      <option value="ru">Русский</option>
-      <option value="es">Español</option>
-    </select>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-brand" href="/">
+      <span class="site-brand-mark" aria-hidden="true">DC</span>
+      <span class="site-brand-name" data-i18n="title">Calculadora de Nómina de DC</span>
+    </a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="site-nav-link" href="https://toolara.dev/" data-i18n="allTools">Todas las herramientas</a>
+      <select id="langSelect" onchange="setLang(this.value)" aria-label="Language">
+        <option value="en">English</option>
+        <option value="zh">简体中文</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="de">Deutsch</option>
+        <option value="ru">Русский</option>
+        <option value="es">Español</option>
+      </select>
+    </nav>
   </div>
+</header>
+
+<header class="hero">
   <div class="hero-inner">
     <div class="hero-badge" data-i18n="heroBadge">🏛️ Washington, D.C.</div>
     <h1 data-i18n="title">Calculadora de Nómina de DC</h1>

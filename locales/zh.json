@@ -1,5 +1,6 @@
 {
   "title": "华盛顿特区薪资计算器",
+  "allTools": "toolara",
   "subtitle": "估算扣除联邦所得税、FICA 和华盛顿特区州税后的实际到手薪资。已更新至 2026 年税率。",
   "calcHeading": "计算器",
   "salaryLabel": "年税前薪资（美元）",

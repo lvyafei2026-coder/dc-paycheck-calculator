@@ -1,5 +1,6 @@
 {
   "title": "華盛頓特區薪資計算器",
+  "allTools": "toolara",
   "subtitle": "估算扣除聯邦所得稅、FICA 和華盛頓特區州稅後的實際到手薪資。已更新至 2026 年稅率。",
   "calcHeading": "計算器",
   "salaryLabel": "年稅前薪資（美元）",

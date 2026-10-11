@@ -1,5 +1,6 @@
 {
   "title": "DC-Gehaltsrechner",
+  "allTools": "toolara",
   "subtitle": "Schätzen Sie Ihr Nettoeinkommen nach Bundessteuer, FICA und District of Columbia Steuern. Aktualisiert für 2026.",
   "calcHeading": "Rechner",
   "salaryLabel": "Bruttojahresgehalt ($)",

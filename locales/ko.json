@@ -1,5 +1,6 @@
 {
   "title": "워싱턴 D.C. 급여 계산기",
+  "allTools": "toolara",
   "subtitle": "연방 소득세, FICA, 워싱턴 D.C. 주세를 공제한 실수령액을 추정합니다. 2026년 세율 반영.",
   "calcHeading": "계산기",
   "salaryLabel": "연봉 (세전, 달러)",

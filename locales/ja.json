@@ -1,5 +1,6 @@
 {
   "title": "ワシントンD.C. 給与計算ツール",
+  "allTools": "toolara",
   "subtitle": "連邦所得税、FICA、およびワシントンD.C.州税を差し引いた手取り額を推定します。2026年税率対応。",
   "calcHeading": "計算ツール",
   "salaryLabel": "年収（額面、ドル）",

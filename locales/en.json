@@ -1,5 +1,6 @@
 {
   "title": "DC Paycheck Calculator",
+  "allTools": "toolara",
   "subtitle": "Estimate your take-home pay after federal income tax, FICA, and District of Columbia taxes. Updated for 2026.",
   "calcHeading": "Calculator",
   "salaryLabel": "Annual gross salary ($)",
