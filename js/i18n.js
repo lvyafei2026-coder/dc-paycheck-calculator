@@ -9,18 +9,13 @@ const cache = {};
 
 function detectPageLang() {
   if (window.__FORCE_LANG__ && SUPPORTED_LANGS.includes(window.__FORCE_LANG__)) return window.__FORCE_LANG__;
-  const path = window.location.pathname;
-  const idx = path.indexOf('/dc-paycheck-calculator');
-  if (idx === -1) return DEFAULT_LANG;
-  const rest = path.slice(idx + '/dc-paycheck-calculator'.length);
-  const m = rest.match(/^\/(zh-tw|zh|ja|ko|de|ru|es)\//);
-  if (m) return PATH_TO_LANG['/' + m[1] + '/'] || DEFAULT_LANG;
-  return DEFAULT_LANG;
+  const path = window.location.pathname.replace(/\/$/, '') + '/';
+  return PATH_TO_LANG[path] || DEFAULT_LANG;
 }
 
 async function loadLocale(lang) {
   if (cache[lang]) return cache[lang];
-  const res = await fetch('/dc-paycheck-calculator/locales/' + lang + '.json');
+  const res = await fetch('/locales/' + lang + '.json');
   if (!res.ok) throw new Error('Failed: ' + lang);
   const data = await res.json();
   cache[lang] = data;
@@ -51,8 +46,7 @@ async function initPage() {
 
 function setLang(lang) {
   if (!SUPPORTED_LANGS.includes(lang)) lang = DEFAULT_LANG;
-  const target = (LANG_TO_PATH[lang] || '/').replace(/^\//, '/dc-paycheck-calculator/');
-  window.location.href = target;
+  window.location.href = LANG_TO_PATH[lang] || '/';
 }
 
 document.addEventListener('DOMContentLoaded', initPage);
